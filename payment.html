@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Iconz</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/hover-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<style>
+    .nav_ {
+        background: #550355c2 !important;
+        position: sticky;
+        top: 0;
+    }
+
+    .sec4 {
+        height: 500px;
+        margin-top: 0;
+    }
+
+    .container .card-pay {
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background: #fff;
+        border-radius: 20px;
+    }
+
+    .btn.btn-primary {
+        background-color: #ddd;
+        color: black;
+        box-shadow: none;
+        border: none;
+        font-size: 20px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn.btn-primary:focus {
+        box-shadow: none;
+    }
+
+    .container .card-pay .img-box {
+        width: 80px;
+        height: 50px;
+    }
+
+    .container .card-pay img {
+        width: 100%;
+        object-fit: fill;
+    }
+
+    .container .card-pay .number {
+        font-size: 24px;
+    }
+
+    .container .card-body .btn.btn-primary .fab.fa-cc-paypal {
+        font-size: 32px;
+        color: #3333f7;
+    }
+
+    .fab.fa-cc-amex {
+        color: #1c6acf;
+        font-size: 32px;
+    }
+
+    .fab.fa-cc-mastercard {
+        font-size: 32px;
+        color: red;
+    }
+
+    .fab.fa-cc-discover {
+        font-size: 32px;
+        color: orange;
+    }
+
+    .c-green {
+        color: green;
+    }
+
+    .box {
+        height: 40px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ddd;
+    }
+
+    .form__div {
+        height: 50px;
+        position: relative;
+        margin-bottom: 24px;
+    }
+
+    .form-control {
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+        border: 1px solid #DADCE0;
+        border-radius: 0;
+        outline: none;
+        padding: 2px;
+        background: none;
+        z-index: 1;
+        box-shadow: none;
+    }
+
+    .form__label {
+        position: absolute;
+        left: 16px;
+        top: 10px;
+        background-color: #fff;
+        color: #80868B;
+        font-size: 16px;
+        transition: .3s;
+        text-transform: uppercase;
+    }
+
+    .form-control:focus+.form__label {
+        top: -8px;
+        left: 12px;
+        color: rebeccapurple;
+        font-size: 12px;
+        font-weight: 500;
+        z-index: 10;
+    }
+
+    .form-control:not(:placeholder-shown).form-control:not(:focus)+.form__label {
+        top: -8px;
+        left: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        z-index: 10;
+    }
+
+    .form-control:focus {
+        border: 1.5px solid rebeccapurple;
+        box-shadow: none;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="topheder">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="leftHead d-flex justify-content-start align-items-center " style="flex-wrap: wrap;">
+                    <a href=""><i class="fas fa-phone"></i> +971 56 471 4735</a><a href=""><i
+                            class="fab fa-whatsapp"></i> +971 56 471 4735</a><a href=""><i class="fas fa-envelope"></i>
+                        info@eventiconz.com</a>
+                </div>
+                <div class="rightHead d-flex justify-content-end align-items-center ">
+                    <div class="socialMedia">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-snapchat"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="" class="btnLogin"><i class="fas fa-sign-in-alt"></i>Login</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="sec1_"> -->
+            <div class="nav_">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <img width="90"
+                            src="assets/images/WhatsApp_Image_2023-05-16_at_22.04.20-removebg-preview.png" alt="">
+                    </div>
+                    <div class="links d-flex justify-content-between align-items-center">
+                        <a href="index.html">Home</a>
+                        <a href="Users/showUsers.html">Models</a>
+                        <a href="Agent/showAgents.html">Agents</a>
+                        <a href="achievements.html">Events</a>
+                        <a href="">Contact Us</a>
+                    </div>
+                    <div class="men d-flex justify-content-between align-items-center">
+                        <a href="" class="btnLogin mr-4"><i class="fas fa-sign-in-alt"></i>Login</a>
+                        <div class="menu_">
+                        <i class="fas fa-bars mr-4 text-white" id="burger"></i>
+                        <div class="menulinks" style="flex-direction: column;">
+                            <a href="index.html">Home</a>
+                            <a href="Users/showUsers.html">Models</a>
+                            <a href="Agent/showAgents.html">Agents</a>
+                            <a href="achievements.html">Events</a>
+                            <a href="">Contact Us</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+    </header>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 mb-lg-0 mb-3">
+                <div class="card-pay wow flipInX p-3">
+                    <div class="img-box">
+                        <img src="https://www.freepnglogos.com/uploads/visa-logo-download-png-21.png" alt="">
+                    </div>
+                    <div class="number">
+                        <label class="fw-bold" for="">**** **** **** 1060</label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
+                        <small><span class="fw-bold">Name:</span><span>Ahmed</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-3">
+                <div class="card-pay wow flipInX p-3">
+                    <div class="img-box">
+                        <img src="https://www.freepnglogos.com/uploads/mastercard-png/file-mastercard-logo-svg-wikimedia-commons-4.png"
+                            alt="">
+                    </div>
+                    <div class="number">
+                        <label class="fw-bold">**** **** **** 1060</label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
+                        <small><span class="fw-bold">Name:</span><span>Ahmed</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-3">
+                <div class="card-pay wow flipInX p-3">
+                    <div class="img-box">
+                        <img src="https://www.freepnglogos.com/uploads/discover-png-logo/credit-cards-discover-png-logo-4.png"
+                            alt="">
+                    </div>
+                    <div class="number">
+                        <label class="fw-bold">**** **** **** 1060</label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
+                        <small><span class="fw-bold">Name:</span><span>Ahmed</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 my-3">
+                <div class="card-pay p-3">
+                    <div class="card-pay p-3 mb-3">
+                        <p class="mb-0 fw-bold h4">Payment Methods</p>
+                    </div>
+                    <div class="card-body border p-0">
+                        <p>
+                            <a class="btn btn-primary w-100 h-100 d-flex align-items-center justify-content-between"
+                                data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+                                aria-controls="collapseExample">
+                                <span class="fw-bold">PayPal</span>
+                                <span class="fab fa-cc-paypal">
+                                </span>
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn btn-primary p-2 w-100 h-100 d-flex align-items-center justify-content-between"
+                                data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+                                aria-controls="collapseExample">
+                                <span class="fw-bold">Credit Card</span>
+                                <span class="">
+                                    <span class="fab fa-cc-amex"></span>
+                                    <span class="fab fa-cc-mastercard"></span>
+                                    <span class="fab fa-cc-discover"></span>
+                                </span>
+                            </a>
+                        </p>
+                        <div class="collapse p-3 pt-0" id="collapseExample">
+                            <div class="row">
+                                <div class="col-8">
+                                    <p class="h4 mb-0">Summary</p>
+                                    <p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green">: Name of
+                                            product</span></p>
+                                    <p class="mb-0"><span class="fw-bold">Price:</span><span
+                                            class="c-green">:$452.90</span></p>
+                                    <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
+                                        nihil neque
+                                        quisquam aut
+                                        repellendus, dicta vero? Animi dicta cupiditate, facilis provident quibusdam ab
+                                        quis,
+                                        iste harum ipsum hic, nemo qui!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body border p-0">
+                        <div class="collapse show p-3 pt-0" id="collapseExample">
+                            <div class="row">
+                                <div class="col-lg-5 mb-lg-0 mb-3">
+                                    <p class="h4 mb-0">Summary</p>
+                                    <p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green">: Name of
+                                            product</span>
+                                    </p>
+                                    <p class="mb-0">
+                                        <span class="fw-bold">Price:</span>
+                                        <span class="c-green">:$452.90</span>
+                                    </p>
+                                    <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
+                                        nihil neque
+                                        quisquam aut
+                                        repellendus, dicta vero? Animi dicta cupiditate, facilis provident quibusdam ab
+                                        quis,
+                                        iste harum ipsum hic, nemo qui!</p>
+                                </div>
+                                <div class="col-lg-7">
+                                    <form action="" class="form">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form__div">
+                                                    <input type="text" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">Card Number</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form__div">
+                                                    <input type="text" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">MM / yy</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form__div">
+                                                    <input type="password" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">cvv code</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form__div">
+                                                    <input type="text" class="form-control" placeholder=" ">
+                                                    <label for="" class="form__label">name on the card</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn w-100 text-white py-3"
+                                                    style="background-color: rgb(0, 0, 0);">Sumbit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn py-3 text-white" style="background-color: rebeccapurple;">
+                    Make Payment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section class="sec4 p-0 m-0 contact_us col-lg-12">
+        <video src="assets/images/sss.mp4" width="100%" loop autoplay muted></video>
+        <div class="layer"></div>
+
+        <footer class="col-lg-12">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-4">
+                        <h2 class="text-white">Contact Info</h2>
+                        <p> Business Center1, M Floor
+                            The Meydan Hotel,<br> Nad Al Sheba
+                            Dubai, United Arab Emirates</p>
+                        <p><i class="fas fa-phone"></i> +971 58 567 7247</p>
+                        <p>
+                            <i class="fab fa-whatsapp"></i> +971 58 567 7247
+                        </p>
+                        <p><i class="fas fa-envelope"></i> info@eventiconz.com</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h2>Let's Get Social</h2>
+                        <p>Follow me to interact, discover and share ideas</p>
+                    </div>
+                    <div class="col-lg-4" style="text-align: center;">
+                        <h2>Social Media</h2>
+                        <div class="links_">
+                            <a href=""><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href=""><i class="fab fa-snapchat"></i> Snapchat</a>
+                            <a href=""><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href=""><i class="fab fa-youtube"></i> Youtube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyRight text-center border-top pt-3">
+                <p class="text-white">© Copyrights Event Iconz 2023. All rights reserved.</p>
+                <p class="" style="font-size: 13px;">Powered By Vega Web Team</p>
+            </div>
+        </footer>
+    </section>
+
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.131.2/three.min.js"></script>
+    <!-- jsDelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.131.2/build/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <!-- Include Three.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.131.2/three.min.js"></script>
+
+    <!-- unpkg -->
+   <script src="https://unpkg.com/three@0.131.2/build/three.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/myjs.js"></script>
+    <script>
+        new WOW().init();
+        window.onscroll = function () {
+            if (window.scrollY >= '30') {
+                $('.nav_').css({ 'position': 'fixed', 'background': '#550355c2' })
+            } else {
+                $('.nav_').css({ 'position': 'sticky', 'background': 'transparent' })
+                $('.Topheader').css('display', 'block')
+            }
+        }
+    </script>
+</body>
+
+</html>
